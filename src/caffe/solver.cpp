@@ -327,6 +327,7 @@ void Solver<Dtype>::TestAll() {
 template <typename Dtype>
 void Solver<Dtype>::Test(const int test_net_id) {
   CHECK(Caffe::root_solver());
+  LOG(INFO) << "+++++++++++++++test+++++++++++++++++++++" ;
   LOG(INFO) << "Iteration " << iter_
             << ", Testing net (#" << test_net_id << ")";
   CHECK_NOTNULL(test_nets_[test_net_id].get())->
